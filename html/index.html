@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tesseract Mobile Test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            p { font-size: 18pt; }
+            #request { font-size: 18pt; width: 100%; box-sizing: border-box; }
+            #sign {font-size: 18pt; width: 100%; box-sizing: border-box; }
+            #response { width: 100%; }
+            #w-header { width: 100%; border-top: 1px solid lightgray; border-bottom: 1px solid lightgray; margin-bottom: 8px;}
+            #wallets { width: 100%; display: table; border-collapse: collapse; }
+            #wallets p { width: 100%; display: table-row; border: 1px solid lightgray; border-radius: 30px; }
+            #wallets p.active { border-color: black !important; }
+            #wallets img { padding: 8px; width: 48px; display: table-cell; }
+            #wallets span { display: table-cell; vertical-align: middle; }
+        </style>
+    </head>
+    <body>
+        <h1>Tesseract Test Web DApp</h1>
+        <p><label for="request">Request:</label></p>
+        <p><input type="text" id="request" value="test_message"></input></p>
+        <p><button id="sign">Sign Request</button></p>
+        <p id="response"></p>
+        <p id="w-header">Installed Wallets:</p>
+        <div id="wallets"></div>
+        <script>
+            function main(window) {
+                const wallets = [];
+                const requests = {};
+                var activeWallet = null;
+                var requestId = 1;
+
+                function request(method, walletid, params) {
+                    const id = requestId++;
+                    const response = new Promise((res, rej) => { requests[id] = [res, rej]; });
+                    window.postMessage({id: id, to: walletid, method: method, params: params}, "*");
+                    return response;
+                }
+
+                async function sendMessage(message, wallet) {
+                    const reqId = await request("WALLET_REQUEST_WRITE", wallet.id, [message]);
+                    let response = new Promise((res, rej) => {
+                        var counter = 0;
+                        function tryRead() {
+                            if (counter++ === 30) {
+                                request("WALLET_REQUEST_CANCEL", wallet.id, [reqId])
+                                    .then(() => { rej("timeout"); })
+                                    .catch((err) => rej(err));
+                                return;
+                            }
+                            request("WALLET_RESPONSE_READ", wallet.id, [reqId])
+                                .then((response) => {
+                                    if (response.finished) {
+                                        const parsed = JSON.parse(response.data);
+                                        if (parsed.error) {
+                                            rej(parsed.error);
+                                        } else {
+                                            res(parsed.response);
+                                        }
+                                    } else {
+                                        setTimeout(tryRead, 1000);
+                                    }
+                                })
+                                .catch((err) => {
+                                    rej(err);
+                                });
+                        }
+                        setTimeout(tryRead, 3000);
+                    });
+                    window.location.href = wallet.scheme + "//?type=webext&req=" + reqId;
+                    return await response;
+                }
+
+                function showWallets() {
+                    if (!activeWallet) { activeWallet = wallets[0]; }
+                    const element = window.document.getElementById("wallets");
+                    element.innerHTML = '';
+                    for (const wallet of wallets) {
+                        let container = window.document.createElement("p");
+                        container.className = wallet.id === activeWallet.id ? "active" : '';
+                        container.addEventListener('click', () => { activeWallet = wallet })
+                        let img = window.document.createElement("img");
+                        img.src = wallet.icon;
+                        container.appendChild(img);
+                        let text = window.document.createElement("span");
+                        text.innerText = wallet.name;
+                        container.appendChild(text);
+                        element.appendChild(container);
+                    }
+                }
+
+                window.addEventListener('message', function (event) {
+                    if (event.source !== window) { return; }
+                    if (event.data.to !== 'page') { return; }
+                    if (!event.data.method) {
+                        console.error("Bad event", event);
+                        return;
+                    }
+                    console.log("EVENT", event.data);
+                    switch (event.data.method) {
+                        case "WALLET_EXTENSION_INFO_RESPONSE":
+                            wallets.push(event.data.response);
+                            showWallets();
+                            break;
+                        case "WALLET_RESPONSE":
+                            if (!event.data.id) {
+                                console.error("No id", event.data);
+                                return;
+                            }
+                            if (!requests[event.data.id]) {
+                                console.error("No request with id", event.data.id);
+                                return;
+                            }
+                            const [res, rej] = requests[event.data.id];
+                            if (event.data.error) {
+                                rej(event.data.error);
+                            } else {
+                                res(event.data.response);
+                            }
+                            break;
+                        default:
+                            console.error("Unknown type", event.data);
+                            break;
+                    }
+                }, false);
+
+                function runTest(event) {
+                    event.preventDefault();
+                    const message = window.document.getElementById("request").value;
+                    const response = window.document.getElementById("response");
+                    if (!activeWallet) { this.alert("No wallets selected!"); return; }
+                    response.innerText = ""
+                    sendMessage(message, activeWallet)
+                        .then((res) => {
+                            response.style.color = "black";
+                            response.innerText = res;
+                        })
+                        .catch((err) => {
+                            response.style.color = "red";
+                            response.innerText = "Error: " + err.toString();
+                        })
+                }
+
+                window.document.getElementById("sign").addEventListener('click', runTest);
+
+                window.postMessage({
+                    id: null, to: "ALLWALLETS", method: "WALLET_EXTENSION_INFO_REQUEST", params: []
+                }, "*");
+            }
+            window.addEventListener('load', function () { main(this); }, false);
+        </script>
+    </body>
+</html>

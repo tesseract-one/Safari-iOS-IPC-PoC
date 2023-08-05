@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9217C96E2A7D2A6600949369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9217C96D2A7D2A6600949369 /* AppDelegate.swift */; };
-		9217C9722A7D2A6600949369 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 9217C9702A7D2A6600949369 /* Main.html */; };
-		9217C9742A7D2A6600949369 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9217C9732A7D2A6600949369 /* Icon.png */; };
-		9217C9762A7D2A6600949369 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 9217C9752A7D2A6600949369 /* Style.css */; };
-		9217C9782A7D2A6600949369 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9217C9772A7D2A6600949369 /* SceneDelegate.swift */; };
-		9217C97A2A7D2A6600949369 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9217C9792A7D2A6600949369 /* ViewController.swift */; };
-		9217C97D2A7D2A6600949369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9217C97B2A7D2A6600949369 /* LaunchScreen.storyboard */; };
-		9217C9802A7D2A6600949369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9217C97E2A7D2A6600949369 /* Main.storyboard */; };
 		9217C9882A7D2A6800949369 /* TestSafariExt Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9217C9872A7D2A6800949369 /* TestSafariExt Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9217C98D2A7D2A6800949369 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9217C98C2A7D2A6800949369 /* SafariWebExtensionHandler.swift */; };
 		9217C9902A7D2A6800949369 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 9217C98F2A7D2A6800949369 /* _locales */; };
@@ -22,10 +14,13 @@
 		9217C9942A7D2A6800949369 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 9217C9932A7D2A6800949369 /* manifest.json */; };
 		9217C9962A7D2A6800949369 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 9217C9952A7D2A6800949369 /* background.js */; };
 		9217C9982A7D2A6800949369 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 9217C9972A7D2A6800949369 /* content.js */; };
-		9217C99A2A7D2A6900949369 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 9217C9992A7D2A6800949369 /* popup.html */; };
-		9217C99C2A7D2A6900949369 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 9217C99B2A7D2A6900949369 /* popup.css */; };
-		9217C99E2A7D2A6900949369 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 9217C99D2A7D2A6900949369 /* popup.js */; };
 		9217C9A02A7D2A6900949369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9217C9812A7D2A6800949369 /* Assets.xcassets */; };
+		9217C9C52A7D993000949369 /* GoBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9217C9C42A7D993000949369 /* GoBack.swift */; };
+		92B59EBD2A7E49390068D7AB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B59EBA2A7E49380068D7AB /* MainView.swift */; };
+		92B59EBE2A7E49390068D7AB /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B59EBB2A7E49390068D7AB /* WalletModel.swift */; };
+		92B59EBF2A7E49390068D7AB /* WalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B59EBC2A7E49390068D7AB /* WalletApp.swift */; };
+		92B59EC12A7E49540068D7AB /* SignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B59EC02A7E49540068D7AB /* SignView.swift */; };
+		92BEE4882A7E8828005AC317 /* InfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BEE4872A7E8828005AC317 /* InfoProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,14 +49,6 @@
 
 /* Begin PBXFileReference section */
 		9217C96A2A7D2A6600949369 /* TestSafariExt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSafariExt.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9217C96D2A7D2A6600949369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9217C9712A7D2A6600949369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
-		9217C9732A7D2A6600949369 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		9217C9752A7D2A6600949369 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
-		9217C9772A7D2A6600949369 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9217C9792A7D2A6600949369 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9217C97C2A7D2A6600949369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9217C97F2A7D2A6600949369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9217C9812A7D2A6800949369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9217C9822A7D2A6800949369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9217C9872A7D2A6800949369 /* TestSafariExt Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TestSafariExt Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,10 +58,15 @@
 		9217C9932A7D2A6800949369 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
 		9217C9952A7D2A6800949369 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
 		9217C9972A7D2A6800949369 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
-		9217C9992A7D2A6800949369 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
-		9217C99B2A7D2A6900949369 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
-		9217C99D2A7D2A6900949369 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
 		9217C99F2A7D2A6900949369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9217C9C22A7D781300949369 /* TestSafariExt Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TestSafariExt Extension.entitlements"; sourceTree = "<group>"; };
+		9217C9C42A7D993000949369 /* GoBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBack.swift; sourceTree = "<group>"; };
+		92B59EBA2A7E49380068D7AB /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		92B59EBB2A7E49390068D7AB /* WalletModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
+		92B59EBC2A7E49390068D7AB /* WalletApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletApp.swift; sourceTree = "<group>"; };
+		92B59EC02A7E49540068D7AB /* SignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignView.swift; sourceTree = "<group>"; };
+		92B59EC22A7E53F30068D7AB /* TestSafariExt.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = TestSafariExt.entitlements; sourceTree = "<group>"; };
+		92BEE4872A7E8828005AC317 /* InfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,31 +108,23 @@
 		9217C96C2A7D2A6600949369 /* TestSafariExt */ = {
 			isa = PBXGroup;
 			children = (
-				9217C96D2A7D2A6600949369 /* AppDelegate.swift */,
-				9217C9772A7D2A6600949369 /* SceneDelegate.swift */,
-				9217C9792A7D2A6600949369 /* ViewController.swift */,
-				9217C97B2A7D2A6600949369 /* LaunchScreen.storyboard */,
-				9217C97E2A7D2A6600949369 /* Main.storyboard */,
+				92B59EC22A7E53F30068D7AB /* TestSafariExt.entitlements */,
+				92B59EBA2A7E49380068D7AB /* MainView.swift */,
+				92B59EC02A7E49540068D7AB /* SignView.swift */,
+				92B59EBC2A7E49390068D7AB /* WalletApp.swift */,
+				92B59EBB2A7E49390068D7AB /* WalletModel.swift */,
+				9217C9C42A7D993000949369 /* GoBack.swift */,
 				9217C9812A7D2A6800949369 /* Assets.xcassets */,
 				9217C9822A7D2A6800949369 /* Info.plist */,
-				9217C96F2A7D2A6600949369 /* Resources */,
 			);
 			path = TestSafariExt;
-			sourceTree = "<group>";
-		};
-		9217C96F2A7D2A6600949369 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				9217C9702A7D2A6600949369 /* Main.html */,
-				9217C9732A7D2A6600949369 /* Icon.png */,
-				9217C9752A7D2A6600949369 /* Style.css */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		9217C98B2A7D2A6800949369 /* TestSafariExt Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9217C9C22A7D781300949369 /* TestSafariExt Extension.entitlements */,
+				92BEE4872A7E8828005AC317 /* InfoProvider.swift */,
 				9217C98C2A7D2A6800949369 /* SafariWebExtensionHandler.swift */,
 				9217C99F2A7D2A6900949369 /* Info.plist */,
 				9217C98E2A7D2A6800949369 /* Resources */,
@@ -156,9 +140,6 @@
 				9217C9932A7D2A6800949369 /* manifest.json */,
 				9217C9952A7D2A6800949369 /* background.js */,
 				9217C9972A7D2A6800949369 /* content.js */,
-				9217C9992A7D2A6800949369 /* popup.html */,
-				9217C99B2A7D2A6900949369 /* popup.css */,
-				9217C99D2A7D2A6900949369 /* popup.js */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -244,12 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9217C9742A7D2A6600949369 /* Icon.png in Resources */,
-				9217C9802A7D2A6600949369 /* Main.storyboard in Resources */,
-				9217C97D2A7D2A6600949369 /* LaunchScreen.storyboard in Resources */,
-				9217C9722A7D2A6600949369 /* Main.html in Resources */,
 				9217C9A02A7D2A6900949369 /* Assets.xcassets in Resources */,
-				9217C9762A7D2A6600949369 /* Style.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,13 +234,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9217C9962A7D2A6800949369 /* background.js in Resources */,
-				9217C99C2A7D2A6900949369 /* popup.css in Resources */,
-				9217C99A2A7D2A6900949369 /* popup.html in Resources */,
 				9217C9922A7D2A6800949369 /* images in Resources */,
 				9217C9942A7D2A6800949369 /* manifest.json in Resources */,
 				9217C9902A7D2A6800949369 /* _locales in Resources */,
 				9217C9982A7D2A6800949369 /* content.js in Resources */,
-				9217C99E2A7D2A6900949369 /* popup.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,9 +248,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9217C97A2A7D2A6600949369 /* ViewController.swift in Sources */,
-				9217C96E2A7D2A6600949369 /* AppDelegate.swift in Sources */,
-				9217C9782A7D2A6600949369 /* SceneDelegate.swift in Sources */,
+				92B59EBF2A7E49390068D7AB /* WalletApp.swift in Sources */,
+				92B59EC12A7E49540068D7AB /* SignView.swift in Sources */,
+				92B59EBD2A7E49390068D7AB /* MainView.swift in Sources */,
+				9217C9C52A7D993000949369 /* GoBack.swift in Sources */,
+				92B59EBE2A7E49390068D7AB /* WalletModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92BEE4882A7E8828005AC317 /* InfoProvider.swift in Sources */,
 				9217C98D2A7D2A6800949369 /* SafariWebExtensionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,33 +274,6 @@
 			targetProxy = 9217C9892A7D2A6800949369 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		9217C9702A7D2A6600949369 /* Main.html */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9217C9712A7D2A6600949369 /* Base */,
-			);
-			name = Main.html;
-			sourceTree = "<group>";
-		};
-		9217C97B2A7D2A6600949369 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9217C97C2A7D2A6600949369 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		9217C97E2A7D2A6600949369 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9217C97F2A7D2A6600949369 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9217C9A12A7D2A6900949369 /* Debug */ = {
@@ -444,12 +393,13 @@
 		9217C9A42A7D2A6900949369 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TestSafariExt Extension/TestSafariExt Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8S89PJHTSK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "TestSafariExt Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "TestSafariExt Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "Test Safari Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -474,12 +424,13 @@
 		9217C9A52A7D2A6900949369 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TestSafariExt Extension/TestSafariExt Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8S89PJHTSK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "TestSafariExt Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "TestSafariExt Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "Test Safari Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -507,6 +458,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TestSafariExt/TestSafariExt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8S89PJHTSK;
@@ -514,22 +466,11 @@
 				INFOPLIST_FILE = TestSafariExt/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TestSafariExt;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = (
-					"-framework",
-					SafariServices,
-					"-framework",
-					WebKit,
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = ch.popovy.TestSafariExt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -544,6 +485,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TestSafariExt/TestSafariExt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8S89PJHTSK;
@@ -551,22 +493,11 @@
 				INFOPLIST_FILE = TestSafariExt/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TestSafariExt;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = (
-					"-framework",
-					SafariServices,
-					"-framework",
-					WebKit,
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = ch.popovy.TestSafariExt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -1,6 +1,11 @@
-browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    console.log("Received request: ", request);
-
-    if (request.greeting === "hello")
-        sendResponse({ farewell: "goodbye" });
+browser.runtime.onMessage.addListener(async (request, sender) => {
+    if (request.to !== "native") {
+        return { error: "unsupported request" };
+    }
+    try {
+        let response = await browser.runtime.sendNativeMessage("application.id", request);
+        return { response: response };
+    } catch(error) {
+        return { error: error.toString() };
+    }
 });
