@@ -115,7 +115,8 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             let info = try PluginInfoProvider(bundle: .main)
             sendOk(value: ["name": info.name,
                            "scheme": info.scheme,
-                           "icon": info.icon],
+                           "icon": info.icon,
+                           "protocols": info.protocols],
                    context: context)
         } catch let error as ReqError {
             sendErr(error: error, context: context)

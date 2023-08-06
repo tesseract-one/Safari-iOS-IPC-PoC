@@ -2,8 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>WalletURLScheme</key>
-	<string>tsafari:</string>
+	<key>Tesseract</key>
+	<dict>
+		<key>SupportedProtocols</key>
+		<array>
+			<string>webtest</string>
+		</array>
+		<key>URLScheme</key>
+		<string>tsafari:</string>
+	</dict>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionPointIdentifier</key>
